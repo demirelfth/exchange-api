@@ -17,6 +17,7 @@ exports.buyShare = async (req, res) => {
     const transaction = await Transaction.create({
       type: 'BUY',
       quantity,
+      sharePrice: share.price,
       PortfolioId: portfolio.id,
       ShareId: share.id,
     });
@@ -60,6 +61,7 @@ exports.sellShare = async (req, res) => {
     const transaction = await Transaction.create({
       type: 'SELL',
       quantity,
+      sharePrice: share.price,
       PortfolioId: portfolio.id,
       ShareId: share.id,
     });

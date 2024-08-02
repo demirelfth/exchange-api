@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+      sharePrice: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false,
+      },
     });
   
     return Transaction;
